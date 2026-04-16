@@ -7,8 +7,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BOT_TOKEN: str = os.environ["8692746932:AAGwi8DTOm3EopPNTrdHthk4tC-A7VsS0ek"]
+BOT_TOKEN: str = os.environ["BOT_TOKEN"]
 
 # Список Telegram user_id администраторов (через запятую в .env)
-_admin_raw = os.environ.get("8416449434", "")
+_admin_raw = os.environ.get("ADMIN_IDS", "")
 ADMIN_IDS: list[int] = [int(x.strip()) for x in _admin_raw.split(",") if x.strip().isdigit()]
